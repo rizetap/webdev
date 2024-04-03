@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            "use strict";
+            let login = promt("Login please", "");
+            let password = promt("password", ""); 
+            if(login =="" || login==null){
+                alert("Canceled");
+            }else if(login=="admin"){
+                if(password=="" || password==null){
+                    alert("Canceled");
+                }else if(password=="TheMaster"){
+                    alert("Welcome");
+                }else{
+                    alert("Wrong password");
+                }
+            }else{
+                alert("I dont know you");
+            }
+        </script>
+    </body>
+</html>

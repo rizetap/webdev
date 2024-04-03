@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Microsoft homepage</title>
+</head>
+
+<body>
+    <div class="corner">
+        <form class="form-div">
+            <img src="logomicro.png" width="100px">
+            <button>Microsoft 365</button>
+            <button>Office</button>
+            <button>Windows</button>
+            <button>Support</button>
+        </form>       
+    </div>
+
+    <div class="rcorner">
+        <form class="form-c">
+            <img src="anonymous.png" width="40px">
+            <button>Войти</button>
+            <button>Поиск</button>
+            <button>Продукты Майкрософт</button>
+        </form>
+    </div>
+
+    <div class="main">
+        <form class="form-main">
+            <img src="microfon.jpg" width="1500px">
+            <div class="text">
+                <h2>
+                    Разработанo для жизни - <br>сегодня и в будущем
+                </h2>
+                <p>
+                    Следующее поколение игр. Ваши цели. Друзья и семья. <br>С Windows 11 вы станете еще ближе к тому, что успели <br> полюбить.
+                </p> 
+                <button class="PC">Проверьте, готов ли ваш ПК</button>               
+            </div>
+            <img src="dots.png" width="200px" >
+
+        </form>
+    </div>
+
+    <div class="news">
+        <form class="form-news">
+            <div class="edge"><img src="edge.avif" width="300px">
+            <h4 >Microsoft Edge</h4>
+            <p >Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p>
+            <a href="#">Скачать ></a></div>
+            
+            <div class="drive"><img src="onedrive.webp" width="300px">
+            <h4>Microsoft One Drive</h4>
+            <p>Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.</p>
+            <a href="#">Подробнее ></a></div>
+            
+            <div class="note"><img src="onenote.webp" width="300px">
+            <h4>OneNote</h4>
+            <p>Приведите свои заметки и дела в порядок.</p>
+            <a href="#">Узнать больше ></a></div>
+            
+            <div class="ios"><img src="ios.webp" width="300px">
+            <h4>Outlook для iOS и Android</h4>
+            <p>Будьте на связи. Организовывайте. Успевайте больше.</p>
+            <a href="#">Скачать ></a></div>
+            
+        </form>
+    </div>
+
+</body>
+
+
+<style>
+    .corner {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        display: flex;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .form-div {
+        display: flex;
+        flex-direction: row; /* Reverses the order of items */
+        align-items: center;
+    }
+
+    .form-div img {
+        margin-right: 10px; /* Adds spacing between the image and text */
+    }
+
+    .form-div button{
+        margin-left: 5px;
+        font-family: 'Roboto', sans-serif;
+        background-color: #fff;
+        border-color: #fff;
+        border:none;
+        cursor: pointer;
+    }
+
+    .rcorner{
+        position: absolute;
+        top: 0;
+        right: 70px;
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+        
+    .form-c {
+        display: flex;
+        flex-direction: row-reverse; /* Reverses the order of items */
+        align-items: center;
+    }
+        
+    .form-c img {
+        margin-right: 10px; /* Adds spacing between the image and text */
+    }
+
+    .form-c button{
+        margin-left: 5px;
+        font-family: 'Roboto', sans-serif;
+        background-color: #fff;
+        border-color: #fff;
+        border:none;
+        cursor: pointer;
+    }
+
+    .main img {
+        display: block; 
+        margin-top: 50px;
+    }
+
+    .main img:last-child{
+        position: absolute;
+        left: 43%;
+        bottom: 150px;
+    }
+
+        
+    .main h2{
+        position: absolute;
+        top: 150px;
+        left: 150px;
+        color: white;
+        text-align: left; 
+        font-size: 36px; 
+        font-weight: bold; 
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .main p{
+        position:absolute;
+        top: 270px;
+        left: 150px;
+        color: white; 
+        font-size: 16px;
+        text-align: left; 
+        font-family: 'Roboto', sans-serif;
+        line-height: 150%;
+    }
+
+    .PC{
+        position: absolute;
+        top: 385px;
+        left: 150px;
+        width: 200px;
+        height: 40px;
+        background-color:rgb(0,103,184);
+        color:#fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+        border-radius: 5%;
+    }
+
+    .PC:hover{
+        background-color:rgb(3, 79, 137);
+    }
+
+    .form-news {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .news .form-news div {
+        text-align: left; 
+        width: 300px; 
+        margin-top: 150px; 
+    }
+
+    .news .form-news h4,
+    .news .form-news p,
+    .news .form-news a {
+        margin-top: 10px; /* Add some space between text and image */
+        font-family: 'Roboco', sans-serif;
+    } 
+          
+</style>

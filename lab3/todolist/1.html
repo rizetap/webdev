@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(img2.jpg);
+    }
+    .todo-container {
+        text-align: center;
+    }
+    .todo-container h2 {
+        font-family: 'Sacramento', cursive;
+        font-size: 50px;
+    }
+    
+    #todoInput {
+        width: 300px;
+        border: solid 2px;
+        border-color:lightgray;
+        border-radius: 5px;
+        padding: 7px;
+    }
+
+    .add-btn {
+        width: 50px; 
+        height: 2.5em;
+        border: solid 2px;
+        border-color: #8ea53c;
+        background-color: #B3D14A;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+
+    .todo-item {
+        width: 1000px;
+        padding: 7px;
+        border: solid 2px;
+        margin-top: 10px;
+        border-color:lightgray;
+        border-radius: 5px; 
+        display:flex;
+        align-items: center;
+        background-color: white;
+    }
+
+    .todo-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .delete-btn {
+      background-color: #ff6666;
+      right: 10px;
+      margin-left: 10px;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h2>ToDo List</h2>
+    <div class ="typing">
+        <input type="text" id="todoInput" placeholder="Enter task">
+        <button class = "add-btn" onclick="addItem()">Add</button>
+        
+    </div>
+
+    <div class="list-container"><ul id="todoList"></ul></div>
+    
+  </div>
+
+  <script>
+    const todoList = document.getElementById('todoList');
+
+    function addItem() {
+      const input = document.getElementById('todoInput');
+      const task = input.value.trim();
+
+      if (task !== '') {
+        const li = document.createElement('li');
+        li.className = 'todo-item';
+        li.innerHTML = `
+          <input type="checkbox" onchange="toggleDone(this)">
+          <span>${task}</span>
+          <button class="delete-btn" onclick="deleteItem(this)">x</button>
+        `;
+        todoList.appendChild(li);
+        input.value = '';
+      } else {
+        alert('Please enter a task!');
+      }
+    }
+
+    function toggleDone(checkbox) {
+      const task = checkbox.nextElementSibling;
+      if (checkbox.checked) {
+        task.style.textDecoration = 'line-through';
+      } else {
+        task.style.textDecoration = 'none';
+      }
+    }
+
+    function deleteItem(button) {
+      const li = button.parentElement;
+      todoList.removeChild(li);
+    }
+  </script>
+</body>
+</html>
