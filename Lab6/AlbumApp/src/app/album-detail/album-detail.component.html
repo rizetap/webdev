@@ -1,0 +1,24 @@
+<div *ngIf="loaded">
+
+  <h3>Album detail #{{album.id}}</h3>
+
+  <div>
+    <label for="editableTitle">Title:</label>
+    <input type="text" id="editableTitle" [(ngModel)]="newTitle" />
+    <button (click)="editAlbumTitle(newTitle)">Save</button>
+  </div>
+
+
+  <h4>{{album.title}}</h4>
+  <!-- <p>{{album.body}}</p> -->
+
+  <div>
+    <a [routerLink]="['/albums']">Return back</a><br />
+    <a [routerLink]="['/albums', album.id, 'photos']">Photos</a>
+  </div>
+
+</div>
+
+<p *ngIf="!loaded">
+  Album's detail page is loading...
+</p>

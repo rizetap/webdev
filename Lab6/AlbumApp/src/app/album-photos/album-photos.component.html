@@ -1,0 +1,13 @@
+<a [routerLink]="['/albums']">Return Back</a>
+
+<div *ngIf="loaded">
+  <div *ngFor="let photo of photos">
+      <h5>{{photo.title}}</h5>
+      <img src="{{photo.url}}" alt="">
+  </div>
+    
+</div>
+
+<div *ngIf="!loaded">
+  <p>Photos are loading...</p>
+</div>
